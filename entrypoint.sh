@@ -1,7 +1,11 @@
 #!/bin/sh
 
-LOCATION=$(printf %s "$(curl -s https://freegeoip.app/json/ | jq '.latitude,.longitude')" | tr '\n' ',')
-sed -i "/location=/c\location=${LOCATION}" /root/.wegorc
+if [ ! -z $LOCATION ]; then
+    sed -i "/location=/c\location=${LOCATION}" /root/.wegorc
+else
+    LOCATION=$(printf %s "$(curl -s https://freegeoip.app/json/ | jq '.latitude,.longitude')" | tr '\n' ',')
+    sed -i "/location=/c\location=${LOCATION}" /root/.wegorc
+fi
 
 if [ ! -z "$BACKEND" ]; then
     sed -i "/backend=/c\backend=${BACKEND}" /root/.wegorc
