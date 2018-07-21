@@ -27,7 +27,7 @@ Currently `forecast.io` is the default weather provider. However the entrypoint 
 2. `docker run -it --name weather -e FIO_API_KEY=<YOUR-KEY-HERE> stshow/weather`
 
 ### To re-run
-3. docker start -a weather
+3. `docker start -a weather`
 
 ### Location 
 Latitude and Longitude courtesy of https://freegeoip.app/json/ by default.
