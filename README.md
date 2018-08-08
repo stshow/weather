@@ -3,7 +3,9 @@
 Dockerized version of https://github.com/schachmat/wego. 
 This appears to be the same app currently used by the host of `wittr.in`.
 
-![Screenshot](https://github.com/stshow/weather/weather-scrot.png)
+![Screenshot](https://raw.githubusercontent.com/stshow/weather/master/weather-scrot.png)
+
+ weather/weather-scrot.png 
 ### Usage
 
 Currently `forecast.io` is the default weather provider. However the entrypoint supports the following:
